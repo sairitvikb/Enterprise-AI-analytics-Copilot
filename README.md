@@ -15,7 +15,7 @@ A sophisticated MVP application that converts the natural language queries to SQ
 - **Natural Language to SQL**: Convert plain English questions to SQL queries using OpenAI GPT-3.5
 - **RAG Architecture**: Retrieval-Augmented Generation with Chroma vector database for schema-aware SQL generation
 - **Security Validation**: SQL Guard module blocks dangerous operations (DROP, DELETE, UPDATE, ALTER, etc.)
-- **SQLite Warehouse**: Mock analytics warehouse with sample schema
+- **SQLite Warehouse**: Mock analytics warehouse with the sample schema
 - **Streamlit UI**: Interactive web interface for query building and execution
 - **Modular Design**: Clean separation of concerns with dedicated modules
 
