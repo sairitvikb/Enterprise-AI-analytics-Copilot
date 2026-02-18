@@ -4,7 +4,7 @@
 🟢 Production Deployed on Streamlit Cloud  
 Auto-deploy enabled via GitHub integration.
 
-A sophisticated MVP application that converts natural language queries to SQL using OpenAI, with RAG-powered schema awareness and security validation.
+A sophisticated MVP application that converts the natural language queries to SQL using OpenAI, with RAG-powered schema awareness and security validation.
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-green)
