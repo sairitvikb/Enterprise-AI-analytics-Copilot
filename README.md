@@ -73,7 +73,7 @@ enterprise-ai-analytics-copilot/
    pip install -r requirements.txt
    ```
 
-4. **Set up OpenAI API key**
+4. **Set up an OpenAI API key**
    - You'll be prompted to enter your API key in the Streamlit sidebar when running the app
 
 ### Usage
