@@ -1,0 +1,56 @@
+-- Enterprise Database Schema
+-- This schema represents a sample analytics warehouse
+
+CREATE TABLE customers (
+    customer_id INTEGER PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    country VARCHAR(100),
+    signup_date DATE,
+    subscription_tier VARCHAR(50)
+);
+
+CREATE TABLE orders (
+    order_id INTEGER PRIMARY KEY,
+    customer_id INTEGER,
+    order_date DATE,
+    total_amount DECIMAL(10, 2),
+    status VARCHAR(50),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+CREATE TABLE products (
+    product_id INTEGER PRIMARY KEY,
+    name VARCHAR(255),
+    category VARCHAR(100),
+    price DECIMAL(10, 2),
+    inventory_count INTEGER,
+    supplier_id INTEGER
+);
+
+CREATE TABLE order_items (
+    order_item_id INTEGER PRIMARY KEY,
+    order_id INTEGER,
+    product_id INTEGER,
+    quantity INTEGER,
+    unit_price DECIMAL(10, 2),
+    FOREIGN KEY (order_id) REFERENCES orders(order_id),
+    FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
+
+CREATE TABLE suppliers (
+    supplier_id INTEGER PRIMARY KEY,
+    name VARCHAR(255),
+    country VARCHAR(100),
+    rating DECIMAL(3, 2),
+    contact_email VARCHAR(255)
+);
+
+CREATE TABLE analytics_events (
+    event_id INTEGER PRIMARY KEY,
+    customer_id INTEGER,
+    event_type VARCHAR(100),
+    event_date DATETIME,
+    event_data TEXT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
