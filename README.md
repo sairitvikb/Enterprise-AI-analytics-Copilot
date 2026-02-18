@@ -57,7 +57,7 @@ enterprise-ai-analytics-copilot/
    cd enterprise-ai-analytics-copilot
    ```
 
-2. **Create virtual environment**
+2. **Create a virtual environment**
    ```bash
    python -m venv venv
    
